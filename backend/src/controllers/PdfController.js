@@ -142,32 +142,5 @@ module.exports = {
     console.log("Arquivo criado!");
 
     return res.json(JSON.parse(rest));
-  },
-
-  // Read the PDF storaged localy
-  async readPdf2(req, res) {
-    // State variable
-    const state = {};
-
-    // Set the  pdf file path
-    const pathFile = path.resolve(
-      __dirname,
-      "..",
-      "..",
-      "tmp",
-      "uploads",
-      localStorage.getItem("lastFile")
-    );
-
-    const fileEst = localStorage
-      .getItem("lastFile")
-      .split(".")
-      .pop();
-
-    console.log(fileEst);
-
-    console.log("Arquivo criado!");
-
-    return res.json();
   }
 };
