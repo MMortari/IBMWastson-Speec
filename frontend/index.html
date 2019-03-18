@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>PDF to Speach</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- JQuery import -->
+    <script
+      src="http://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Bootstrap import -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!-- Fontawesome import -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <!-- Axios import -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- Socket.io import -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+
+    <!-- Style import -->
+    <link rel="stylesheet" href="src/css/style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <h1>Text to Speach</h1>
+        <div class="main">
+          <div class="card">
+            <input
+              id="file"
+              type="file"
+              accept=".txt, .pdf"
+              onChange="event.preventDefault(); sendFile()"
+            />
+            <textarea class="form-control" id="text-return"></textarea>
+            <button class="btn btn-success w-100" onClick="openAudio()">
+              <i class="fas fa-volume-up"></i>
+            </button>
+            <audio src="./" class="w-100" controls></audio>
+            <div id="alert" class="btn btn-light float-right">Waiting!</div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- JavaScript File -->
+    <script src="./src/js/script.js"></script>
+  </body>
+</html>
