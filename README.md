@@ -99,7 +99,7 @@ To use it as an API the base URL to make the requests is `localhost:3000`;
 
 ### Text to Speech
 
-The request URL id `http://localhost:3000/watson/text`, you must pass a JSON into the request body:
+The request URL is `http://localhost:3000/watson/text` and the method is `POST`, you must pass a JSON into the request body:
 
 ```javascript
 {
@@ -107,5 +107,17 @@ The request URL id `http://localhost:3000/watson/text`, you must pass a JSON int
 	"voice": "pt-BR_IsabelaVoice"
 }
 ```
+
+### Audio File
+
+To get the audio file, the request URL is `http://localhost:3000/watson/audio` and the method id `GET`;
+
+### Send PDF or TEXT file
+
+To send a PDF or a TEXT file, the request URL is `http://localhost:3000/pdf/send` and the method id `POST`, you must pass the file as a Multpart form;
+
+### Text return file
+
+To get the text file extracted from the PDF or Text file, the request URL is `http://localhost:3000/pdf/read` and the method id `GET`;
 
 If you got till here, thank you!
