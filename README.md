@@ -5,7 +5,7 @@ Date : 18/03/2019 <br>
 Contact : bmortari2000@gmail.com <br>
 Objective:
 
-- Create a application using any IBM Watson service
+- Create a application using any IBM Watson service.
 
 ## How to install and run
 
@@ -22,8 +22,8 @@ Objective:
   `cd backend` to get into the back-end folder<br>
   `npm install` to install all dependencies<br>
   `npm start` to start the NodeJs project;
-- If you want to use it as a web page, open the `index.html` file in frontend folder
-- If you want to use it as a API, just make the request through `localhost:3000`
+- If you want to use it as a web page, open the `index.html` file in frontend folder;
+- If you want to use it as a API, just make the request through `localhost:3000`;
 
 ## The project
 
@@ -32,7 +32,7 @@ My idea basically was to create a PDF or a Text file reader, then take the text 
 ## The technology
 
 - In the **back-end** I used the NodeJs, I thought it would be more challenging because for me it's a new stack that I've learning;
-- In the **front-end** I used HTML, CSS and Javascript because I was looking for something simple and easy to implement;
+- In the **front-end** I used HTML, CSS and Javascript because I was looking for something simple and easy to implement.
 
 ## Next features
 
@@ -40,7 +40,7 @@ Somethings that I would like the fix and add in the project:
 
 - Fix some problems transforming the PDF into Text;
 - Fix some problems when the file is returned;
-- Add a language translation into the text before transforming it into Audio;
+- Add a language translation into the text before transforming it into Audio.
 
 ## How it works
 
@@ -57,7 +57,7 @@ When I first saw the documentation I've got a little scared but when I start usi
 
 First I created a **controller** and a **configuration** file:
 
-In the **configuration** file have the API KEY and the URL;
+In the **configuration** file have the API KEY and the URL.
 
 ```javascript
 module.exports = {
@@ -91,11 +91,11 @@ await textToSpeech.synthesize(synthesizeParams, async (err, data) => {
 
 ### Frontend
 
-In the front-end I decided to use the basic, HTML, CSS and Javascript, and make something really simple. To make requests to the back-end, I used `Axios` module;
+In the front-end I decided to use the basic, HTML, CSS and Javascript, and make something really simple. To make requests to the back-end, I used `Axios` module.
 
 ## API
 
-To use it as an API the base URL to make the requests is `localhost:3000`;
+To use it as an API the base URL to make the requests is `localhost:3000`.
 
 ### Text to Speech
 
@@ -110,14 +110,14 @@ The request URL is `http://localhost:3000/watson/text` and the method is `POST`,
 
 ### Audio File
 
-To get the audio file, the request URL is `http://localhost:3000/watson/audio` and the method id `GET`;
+To get the audio file, the request URL is `http://localhost:3000/watson/audio` and the method id `GET`.
 
 ### Send PDF or TEXT file
 
-To send a PDF or a TEXT file, the request URL is `http://localhost:3000/pdf/send` and the method id `POST`, you must pass the file as a Multpart form;
+To send a PDF or a TEXT file, the request URL is `http://localhost:3000/pdf/send` and the method id `POST`, you must pass the file as a Multpart form.
 
 ### Text return file
 
-To get the text file extracted from the PDF or Text file, the request URL is `http://localhost:3000/pdf/read` and the method id `GET`;
+To get the text file extracted from the PDF or Text file, the request URL is `http://localhost:3000/pdf/read` and the method id `GET`.
 
 If you got till here, thank you!
