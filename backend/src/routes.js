@@ -16,7 +16,6 @@ routes.post(
   PdfController.storePdf
 ); // Receive the PDF file
 routes.get("/pdf/read", PdfController.readPdf); // Read the PDF file
-routes.get("/pdf/read2", PdfController.readPdf2); // Read the PDF file
 
 // Watson
 routes.post("/watson/text", IbmController.text2Speech); // Connect with the IBM and
