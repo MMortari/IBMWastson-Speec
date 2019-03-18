@@ -79,11 +79,11 @@ const textToSpeech = new watson(watsonConfig);
 await textToSpeech.synthesize(synthesizeParams, async (err, data) => {
   if (err) console.log(err);
   await fs.writeFile(
-    path.resolve(__dirname, "..", "..", "tmp", "audios", `file.wav`),
+    path.resolve(__dirname, "..", "..", "tmp", "audios", `file.mp3`),
     data,
     err => {
       if (err) console.log(err);
-      else console.log(`wav file created`);
+      else console.log(`mp3 file created`);
     }
   );
 });
@@ -103,7 +103,7 @@ The request URL is `http://localhost:3000/watson/text` and the method is `POST`,
 
 ```javascript
 {
-	"text": "Olá pessoal, tudo bêm?",
+	"text": "Olá pessoal, tudo bem?",
 	"voice": "pt-BR_IsabelaVoice"
 }
 ```
